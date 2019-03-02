@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
     float screenSize =0;
     int count =0;
     int score =0;
-
+    String correctTranslatedWord = "";
+    String givenTranslatedWord = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,11 +123,13 @@ public class MainActivity extends AppCompatActivity {
         for (Object o : map.entrySet()) {
             Map.Entry pair = (Map.Entry) o;
                  language1Word.setText(pair.getKey().toString());
+            correctTranslatedWord = pair.getValue().toString();
             }
 
         for (Object o : map2.entrySet()) {
             Map.Entry pair = (Map.Entry) o;
             language2Word.setText(pair.getValue().toString());
+            givenTranslatedWord = pair.getValue().toString();
         }
     }
 
