@@ -1,7 +1,11 @@
 package com.example.user.fallingwords;
 
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.animation.AccelerateInterpolator;
+import android.widget.Button;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -10,15 +14,26 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
     ArrayList<HashMap<String, String>> list = new ArrayList();
+    
+    TextView language1Word, language2Word;
+    Button wrongButton, rightButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        language1Word = findViewById(R.id.language1word);
+        language2Word = findViewById(R.id.language2word);
+        wrongButton = findViewById(R.id.wrong);
+        rightButton = findViewById(R.id.right);
+        loadData();
     }
 
     private void loadData(){
@@ -53,4 +68,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return jsonValue;
     }
+
 }
