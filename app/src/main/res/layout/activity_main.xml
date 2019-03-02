@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="10sp"
+    android:layout_margin="@dimen/marginSmall"
     android:gravity="center|top"
     tools:context="com.example.user.fallingwords.MainActivity">
 
@@ -23,15 +23,15 @@
             android:gravity="center"
             android:text="Hello World!"
             android:background="@drawable/mybutton"
-            android:textSize="25sp" />
+            android:textSize="@dimen/textSize" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Hello World!"
             android:gravity="center"
-            android:textSize="25sp"
-            android:padding="10sp"
+            android:textSize="@dimen/textSize"
+            android:padding="@dimen/marginSmall"
             android:textColor="@color/white"
             android:background="@drawable/mybutton"
             android:id="@+id/language1word"
@@ -42,6 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:id="@+id/wrong"
+            android:layout_margin="@dimen/marginBig"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:background="@drawable/ic_cancel_red_24dp" />
@@ -50,6 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/right"
+            android:layout_margin="@dimen/marginBig"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:background="@drawable/ic_check_circle_green_24dp" />

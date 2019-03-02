@@ -2,6 +2,7 @@ package com.example.user.fallingwords;
 
 import android.content.Intent;
 import android.os.Handler;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         calculateButtomOfScreen();
         generateOptions();
         handler.postDelayed(updateWordThread, 500);
-
+        Log.i("View Created", "here");
        rightButton.setOnTouchListener(new View.OnTouchListener() {
            @Override
            public boolean onTouch(View view, MotionEvent motionEvent) {
