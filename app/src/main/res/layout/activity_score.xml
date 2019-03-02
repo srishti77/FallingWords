@@ -13,7 +13,7 @@
         android:id = "@+id/greetings"
         android:layout_gravity="center"
         android:textSize="@dimen/textSize"
-        android:text="@string/greeting"/>
+        android:text="@string/message_good"/>
 
     <TextView
         android:layout_width="wrap_content"

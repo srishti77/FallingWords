@@ -17,15 +17,16 @@ public class MainActivityTest {
 
     //Mocking the count of words asked as 20
     int count =20;
+
     @Rule
     public ActivityTestRule<MainActivity> activityActivityTestRule = new ActivityTestRule<MainActivity>(MainActivity.class);
 
     @Test
     public void intent() {
+
         if(count == 20){
             Intent intent = new Intent(InstrumentationRegistry.getContext(), ScoreActivity.class );
             activityActivityTestRule.launchActivity(intent);
         }
-        // Continue with your test
     }
 }
