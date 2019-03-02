@@ -1,5 +1,6 @@
 package com.example.user.fallingwords;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -93,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
         list.clear();
         try{
             JSONArray jsonArray = new JSONArray(readDataFromJsonFile());
-
             for(int i=0; i<jsonArray.length(); i++){
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
@@ -172,8 +172,11 @@ public class MainActivity extends AppCompatActivity {
     };
 
     public void gameOver(){
-        Log.i("Game Over", ""+count);
+        Log.i("Game Over", ""+count+ " Score "+score);
         handler.removeCallbacks(updateWordThread);
+        Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+        intent.putExtra("Score", score);
+        startActivity(intent);
     }
 
     public void calculateButtomOfScreen(){

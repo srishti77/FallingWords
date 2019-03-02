@@ -3,4 +3,7 @@
     <string name="score">Score:</string>
     <string name="greeting">Greetings!</string>
     <string name="back">Back</string>
+    <string name="message_avg">Well done! You played Well</string>
+    <string name="message_good">Congratulations! You played very Well</string>
+    <string name="message_do_good">You are in the right direction</string>
 </resources>
